@@ -25,12 +25,16 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\0Compiles\DeliriumSpawnerHighlight\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExileCore">
+      <HintPath>..\..\PoEHelper\ExileCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ImGui.NET">
       <HintPath>..\..\PoeHelper\ImGui.NET.dll</HintPath>
       <Private>False</Private>
@@ -40,7 +44,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="SharpDX.Mathematics">
-      <HintPath>..\..\..\..\..\PoeHelper\SharpDX.Mathematics.dll</HintPath>
+      <HintPath>..\..\ExileApi\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -58,13 +62,6 @@
     <Compile Include="DeliriumSpawnerSettings.cs" />
     <Compile Include="DeliriumSpawnerType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Core\Core.csproj">
-      <Project>{5539D732-34A7-44AB-9E28-116C3429B12A}</Project>
-      <Name>Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
